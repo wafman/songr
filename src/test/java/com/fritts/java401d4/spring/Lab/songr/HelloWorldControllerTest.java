@@ -13,4 +13,12 @@ public class HelloWorldControllerTest {
         assertEquals("should return capital word", expectedOutput, classUnderTest.getCapitalWord("hello"));
     }
 
+    @Test
+    public void testReverse(){
+        HelloWorldController classUnderTest = new HelloWorldController();
+        String expectedOutput = "coming is Winter ";
+        assertEquals("should reverse the string entered", expectedOutput,
+                classUnderTest.getReverseSentence("Winter is coming"));
+    }
+
 }
