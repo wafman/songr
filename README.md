@@ -24,7 +24,7 @@
   - test
     - ```./gradlew test```
   - run
-    - ```./gradlew runBoot```
+    - ```./gradlew bootRun```
     - proceeed in broswer to following routes
       - ```localhost:8080/hello```
       - ```localhost:8080/capitalize/<anyword you want>```
