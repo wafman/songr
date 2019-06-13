@@ -27,7 +27,7 @@ public class AlbumController {
     }
 
     @PostMapping("/albums")
-    public RedirectView addGreeting(@RequestParam String title, @RequestParam String artist, @RequestParam int songCount, @RequestParam int length, @RequestParam String imageURL) {
+    public RedirectView addNewAlbum(@RequestParam String title, @RequestParam String artist, @RequestParam int songCount, @RequestParam int length, @RequestParam String imageURL) {
         Album album = new Album(title, artist, songCount, length, imageURL);
         albumRespository.save(album);
         return new RedirectView("/albums");
