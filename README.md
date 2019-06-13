@@ -1,7 +1,12 @@
-# Lab 11: Spring for Full-Stack Web Apps
+# Lab 11, 12: Spring for Full-Stack Web Apps
 
 ## Description
 - Create a new Spring application. Select Spring Web Starter and Spring Dev Tools as dependencies. This project is designed to create routes and test that functionality of those routes. 
+- connect a database to the web application
+- add information to the database
+- display information from the database
+- create routes for the album display
+- create routes for the add album form
 
 ## API
 - ```@GetMapping("/hello")```
@@ -14,6 +19,10 @@
 - ```@GetMapping("/reverseER")```
   - will reverse everything in the sentence. letters of the word included.
   - in order to see this functionality, you must type ```localhost:8080/reverse?sentence=<put sentence here```>
+- ```/albums```
+  - should show to the user all the albums and album information in the database
+- ```/albums/new```
+  - should allow the user to add an album to the database, and then redirect the user to the ```/albums``` page.
 
 
 ## Directions
@@ -23,10 +32,12 @@
 - from Command Line
   - test
     - ```./gradlew test```
-  - run
+  - Start Server
     - ```./gradlew bootRun```
     - proceeed in broswer to following routes
       - ```localhost:8080/hello```
       - ```localhost:8080/capitalize/<anyword you want>```
       - ```localhost:8080/reverse?sentence=<put sentence here>```
       - ```localhost:8080/reverseER?sentence=<put sentence here>```
+      - ```localhost:8080/albums```
+      - ```localhost:8080/albums/new```
