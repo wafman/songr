@@ -6,11 +6,11 @@
 </head>
 <body>
 <form method="POST" action="/albums">
-    <label for="title">Album Title:</label><input name="title" id="title"/>
-    <label for="artist">Album Artist:</label><input name="artist" id="artist" />
-    <label for="songCount">Album Song Count:</label><input name="songCount" id="songCount" />
-    <label for="length">Album Length:</label><input name="length" id="length" />
-    <label for="imageURL">Album Image URL:</label><input name="imageURL" id="imageURL" />
+    <label for="title">Album Title:</label><input type="text" name="title" id="title" required/>
+    <label for="artist">Album Artist:</label><input name="artist" type="text" id="artist"  required/>
+    <label for="songCount">Album Song Count:</label><input type="number" name="songCount" id="songCount" required />
+    <label for="length">Album Length:</label><input type="number" name="length" id="length" required/>
+    <label for="imageURL">Album Image URL:</label><input type="url" name="imageURL" id="imageURL" required/>
     <input type="submit" />
 </form>
 
