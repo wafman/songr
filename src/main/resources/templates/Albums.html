@@ -11,8 +11,8 @@
     <h1>All albums</h1>
     <ul>
         <li  th:each="album : ${albums}" >
-            <br><a th:href="@{'/albums/' + ${album.id}}"><span th:text="${album.title}"></span></a><br>
-            <br><span th:text="${album.artist}"></span><br>
+            <a th:href="@{'/albums/' + ${album.id}}"><span th:text="${album.title}"></span></a><br>
+            <span th:text="${album.artist}"></span><br>
             <hr>
         </li>
     </ul>

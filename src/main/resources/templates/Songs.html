@@ -11,10 +11,10 @@
 <h1>All songs</h1>
 <ul>
     <li th:each="song : ${songs}">
-        <br>Title:<span th:text="${song.title}" > </span> <br>
-        <br>Track:  <span th:text="${song.trackNumber}"></span><br>
-        <br> Song Length: <span th:text="${song.length}"></span><br>
-        <br>Album Title: <span th:text="${song.album.title}"></span><br>
+        Title:<span th:text="${song.title}" > </span> <br>
+        Track:  <span th:text="${song.trackNumber}"></span><br>
+        Song Length: <span th:text="${song.length}"></span><br>
+        Album Title: <span th:text="${song.album.title}"></span><br>
         <hr>
     </li>
 </ul>
