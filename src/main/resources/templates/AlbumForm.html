@@ -5,14 +5,20 @@
     <title>Add an Album</title>
 </head>
 <body>
-<form method="POST" action="/albums">
-    <label for="title">Album Title:</label><input type="text" name="title" id="title" required/>
-    <label for="artist">Album Artist:</label><input name="artist" type="text" id="artist"  required/>
-    <label for="songCount">Album Song Count:</label><input type="number" name="songCount" id="songCount" required />
-    <label for="length">Album Length:</label><input type="number" name="length" id="length" required/>
-    <label for="imageURL">Album Image URL:</label><input type="url" name="imageURL" id="imageURL" required/>
-    <input type="submit" />
-</form>
+<header><nav><ul><li><a href="/albums">Albums</a></li></ul></nav></header>
+<header><nav><ul><li><a href="/songs">Songs</a></li></ul></nav></header>
+<header><nav><ul><li><a href="/songs/new">Add Songs</a></li></ul></nav></header>
+    <h1>Add Albums</h1>
+        <form method="POST" action="/albums">
+            <label for="title">Album Title:</label><input type="text" name="title" id="title" required/>
+            <label for="artist">Album Artist:</label><input name="artist" type="text" id="artist"  required/>
+            <label for="songCount">Album Song Count:</label><input type="number" name="songCount" id="songCount" required />
+            <label for="length">Album Length:</label><input type="number" name="length" id="length" required/>
+            <label for="imageUrl">Album Image URL:</label><input type="url" name="imageUrl" id="imageUrl" required/>
+            <input type="submit" />
+        </form>
+
+
 
 </body>
 </html>

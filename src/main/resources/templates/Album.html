@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title th:text="${album.title}"></title>
 </head>
 <body>
+<header><nav><ul><li><a href="/albums">Albums</a></li></ul></nav></header>
+<header><nav><ul><li><a href="/albums/new">Add Album</a></li></ul></nav></header>
+<header><nav><ul><li><a href="/songs">Songs</a></li></ul></nav></header>
+<header><nav><ul><li><a href="/songs/new">Add songs</a></li></ul></nav></header>
+    <h1>Album by ID</h1>
+    <p>Album Title: <span th:text="${album.title}"></span></p>
+    <p>Tracks: <span th:text="${album.songCount}"></span></p>
+    <p>Image URL: <span th:text="${album.imageUrl}"></span></p>
 
+    <!--<ul>-->
+        <!--<li th:each="song : ${songs}"><span th:text="${song.title}"></span></li>-->
+    <!--</ul>-->
 </body>
 </html>

@@ -5,13 +5,17 @@
     <title>Album</title>
 </head>
 <body>
+<header><nav><ul><li><a href="/songs">Songs</a></li></ul></nav></header>
+<header><nav><ul><li><a href="/songs/new">Add Songs</a></li></ul></nav></header>
+<header><nav><ul><li><a href="/albums/new">Add an Album</a></li></ul></nav></header>
     <h1>All albums</h1>
     <ul>
         <li  th:each="album : ${albums}" >
-            <span th:text="${album.title}"></span>, <span th:text="${album.artist}"></span>, <span th:text="${album.songCount}"></span>, <span th:text="${album.imageUrl}"></span>
+            <a th:href="@{'/albums/' + ${album.id}}"><span th:text="${album.title}"></span></a>, <span th:text="${album.artist}"></span>
 
         </li>
     </ul>
+
 
 </body>
 </html>
