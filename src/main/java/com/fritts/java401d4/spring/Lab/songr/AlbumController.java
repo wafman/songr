@@ -33,10 +33,13 @@ public class AlbumController {
         return "AlbumForm";
     }
 
+
+    //@RequestMapping(value=
+
     @GetMapping("/albums/{id}")
     public String getAlbumById(@PathVariable Long id, Model model){
         Album album = albumRespository.findById(id).get();
-
+//        Album albumSongs = albumSongs.getSongs();
         model.addAttribute("album", album);
         return "album";
     }
