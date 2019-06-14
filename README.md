@@ -1,4 +1,4 @@
-# Lab 11, 12: Spring for Full-Stack Web Apps
+# Lab 11, 12, 13: Spring for Full-Stack Web Apps
 
 ## Description
 - Create a new Spring application. Select Spring Web Starter and Spring Dev Tools as dependencies. This project is designed to create routes and test that functionality of those routes. 
