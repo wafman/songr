@@ -33,11 +33,18 @@ public class AlbumController {
         return "AlbumForm";
     }
 
+
+    //@RequestMapping(value="albums/{id}", method = RequestMethod = GET)
+
+    //stackoverflow/22794057 tymeleaf send parameter from
+
     @GetMapping("/albums/{id}")
     public String getAlbumById(@PathVariable Long id, Model model){
         Album album = albumRespository.findById(id).get();
+//        Album albumSongs = albumSongs.getSongs();
 
         model.addAttribute("album", album);
+//        model.addAttribute("song", new Song());
         return "album";
     }
 

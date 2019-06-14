@@ -10,9 +10,12 @@
 <header><nav><ul><li><a href="songs/new">Add songs</a></li></ul></nav></header>
 <h1>All songs</h1>
 <ul>
-    <li  th:each="song : ${songs}" >
-        <span th:text="${song.title}"></span>, <span th:text="${song.trackNumber}"></span>, <span th:text="${song.length}"></span>, <span th:text="${album_id.id}"></span>
-
+    <li th:each="song : ${songs}">
+        Title:<span th:text="${song.title}" > </span> <br>
+        Track:  <span th:text="${song.trackNumber}"></span><br>
+        Song Length: <span th:text="${song.length}"></span><br>
+        Album Title: <span th:text="${song.album.title}"></span><br>
+        <hr>
     </li>
 </ul>
 </body>
