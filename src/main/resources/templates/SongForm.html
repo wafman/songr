@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Songs</title>
+</head>
+<body>
+<header><nav><ul><li><a href="/songs">Songs</a></li></ul></nav></header>
+<header><nav><ul><li><a href="/albums">Albums</a></li></ul></nav></header>
+<header><nav><ul><li><a href="/albums/new">Add album</a></li></ul></nav></header>
+    <h1>Add Songs</h1>
+    <form method="POST" action="/songs">
+        <label for="title">Song Title:</label><input type="text" name="title" id="title" required>
+        <label for="length">Song Length:</label><input type="number" name="length" id="length" required>
+        <label for="trackNumber">Track Number:</label><input type="number" name="trackNumber" id="trackNumber" required>
+        <label for="album"></label>Album<input type="text" name="album" id="album" required>
+        <input type="submit">
+    </form>
+
+</body>
+</html>

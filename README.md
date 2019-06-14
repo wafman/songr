@@ -7,6 +7,9 @@
 - display information from the database
 - create routes for the album display
 - create routes for the add album form
+- create routes to handle songs
+- create routes to add songs
+- create route to view a single album
 
 ## API
 - ```@GetMapping("/hello")```
@@ -23,6 +26,12 @@
   - should show to the user all the albums and album information in the database
 - ```/albums/new```
   - should allow the user to add an album to the database, and then redirect the user to the ```/albums``` page.
+- ```/songs```
+  - should show all songs from the database
+- ```/songs/new```
+  - allows user to be able to add songs
+- ```/albums/{id}```
+  - allows user to be able to view a single album, passed by album id
 
 
 ## Directions
@@ -41,3 +50,6 @@
       - ```localhost:8080/reverseER?sentence=<put sentence here>```
       - ```localhost:8080/albums```
       - ```localhost:8080/albums/new```
+      - ```loclalhost:8080/songs```
+      - ```localhost:8080/songs/new```
+      - ```localhost:8080/albums/{id}```

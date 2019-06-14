@@ -1,25 +1,31 @@
 package com.fritts.java401d4.spring.Lab.songr;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 //Album Model
 @Entity
 public class Album {
 
+                                        //instance variables
+
+    //serial primary key annotation
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
+
     String title;
     String artist;
     int songCount;
     int length;
     String imageUrl;
 
-    //constructors
+    //database relationship annotation
+    @OneToMany(mappedBy = "album")
+    List<Song> songs;
+
+                                            //constructors
     public Album(){}
 
     public Album(String title, String artist, int songCount, int length, String imageUrl){
@@ -30,7 +36,7 @@ public class Album {
         this.imageUrl = imageUrl;
     }
 
-    //getters
+                                            //getters
 
     public long getId() {
         return id;
@@ -54,5 +60,9 @@ public class Album {
 
     public String getImageUrl() {
         return imageUrl;
+    }
+
+    public List<Song> getSongs() {
+        return songs;
     }
 }
